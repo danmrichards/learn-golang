@@ -10,6 +10,8 @@ import (
 // package.
 
 // LoadItem - Loads an item and returns it.
+// Note: Functions starting with an Uppercase letter are visible. If this was
+// loadItem (with a lower case l) it would not be visible.
 func LoadItem(id int) *models.Item {
     return &models.Item{
         Price: 9.001,
