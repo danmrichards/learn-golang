@@ -11,6 +11,12 @@ type Logger interface {
     Log(message string)
 }
 
+// Implementing an interface in a structure is not explicit like some languages
+// (e.g. class AThing implements ThingInterface {}). Instead the implementation
+// is implicit if a structure has a function with a matching name, parameters
+// and return type. In this case we need a 'Log' function that takes a message
+// string parameter and returns nothing.
+
 // BoringLogger - Does some logging. A bit boring.
 type BoringLogger struct {}
 
