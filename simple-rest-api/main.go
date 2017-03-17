@@ -27,6 +27,9 @@ type Address struct {
 // All the people, so many people.
 var people []Person
 
+// Port number.
+const port = 12345
+
 // GetPeopleEndpoint - Get all people.
 //
 // Params:
@@ -161,5 +164,6 @@ func main() {
 	router.HandleFunc("/people/{id}", DeletePersonEndpoint).Methods("DELETE")
 
 	// Serve!
-	log.Fatal(http.ListenAndServe(":12345", router))
+	fmt.Printf("Serving on port %d. Press CTRL+C to cancel.", port)
+	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%d", 12345), router))
 }
