@@ -165,5 +165,5 @@ func main() {
 
 	// Serve!
 	fmt.Printf("Serving on port %d. Press CTRL+C to cancel.", port)
-	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%d", 12345), router))
+	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%d", port), router))
 }
